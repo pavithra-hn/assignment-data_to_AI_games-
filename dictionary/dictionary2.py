@@ -6,3 +6,9 @@ AI = [
 ]
 for llms in AI :
     print(llms["name"],llms["type_of_AI"],llms["use_case"],sep=", ")
+
+
+# output:
+# data_to_AI_games, Datatoaigamersrani
+# Subway Surfers, SYBO Games
+# Angry Birds, Rovio Entertainment

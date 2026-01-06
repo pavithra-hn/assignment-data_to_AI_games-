@@ -21,3 +21,6 @@ else:
 
 print(player)
 
+# Output:
+# Level Up!                    
+# {'name': 'Knight', 'stats': {'health': 70, 'attack': 25, 'defense': 10}, 'level': 2}
