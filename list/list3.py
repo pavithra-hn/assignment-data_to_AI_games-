@@ -17,3 +17,19 @@ print("poped:", poped_value)
 for value in values:
     print(value)
 print("length:", len(values))
+
+
+
+
+# output:
+# 20
+# [10, 25, 30, 40, 50]
+# [10, 25, 15, 30, 40, 50, 60]
+# [10, 25, 15, 30, 50]
+# poped: 60
+# 10
+# 25
+# 15
+# 30
+# 50
+# length: 5
