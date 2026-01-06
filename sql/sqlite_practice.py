@@ -4,7 +4,7 @@ import sqlite3
 conn = sqlite3.connect("company.db")
 cursor = conn.cursor()
 
-# Create table
+# Create employees table
 cursor.execute("""
 CREATE TABLE IF NOT EXISTS employees (
     id INTEGER PRIMARY KEY,
@@ -14,7 +14,7 @@ CREATE TABLE IF NOT EXISTS employees (
 )
 """)
 
-# Insert data
+# Insert employees data
 cursor.executemany("""
 INSERT INTO employees (name, department, salary)
 VALUES (?, ?, ?)
@@ -24,6 +24,26 @@ VALUES (?, ?, ?)
     ("Meena", "ML", 60000),
     ("John", "ML", 65000),
     ("Sara", "NLP", 75000)
+])
+
+# 🔹 ONLY DEPARTMENT TABLE ADDED BELOW
+
+# Create departments table
+cursor.execute("""
+CREATE TABLE IF NOT EXISTS departments (
+    dept_name TEXT,
+    manager TEXT
+)
+""")
+
+# Insert departments data
+cursor.executemany("""
+INSERT INTO departments (dept_name, manager)
+VALUES (?, ?)
+""", [
+    ("AI", "Anita"),
+    ("ML", "Rahul"),
+    ("HR", "Suman")
 ])
 
 conn.commit()
