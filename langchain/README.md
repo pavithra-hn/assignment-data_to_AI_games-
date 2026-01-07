@@ -20,6 +20,10 @@ The API key is securely managed using a `.env` file.
 - Google Gemini (Free Tier)
 - python-dotenv
 
+## Query Executed
+- What's the capital of India?
+## Output
+- The capital of India is New Delhi.
 
 
 ## Setup Instructions
