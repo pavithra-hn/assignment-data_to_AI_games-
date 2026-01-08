@@ -35,6 +35,8 @@
 Displays a heading "My First jQuery Program", a button "Click Me", and text "Hello World".
 When the button is clicked, the text "Hello World" changes to "jQuery is working successfully!".
 
+
+![Code 1 Output](outputs/code_1_output.png)
 ---
 
 ## Code 2
@@ -66,6 +68,8 @@ $("#showBtn").click(function () {
 Displays a button "Show". A hidden paragraph exists on the page.
 When the button is clicked, the text "Hidden paragraph" appears/becomes visible.
 
+
+![Code 2 Output](outputs/code_2_output.png)
 ---
 
 ## Code 3
@@ -97,6 +101,8 @@ $("#toggleBtn").click(function () {
 Displays text "Toggle me" and a button "Toggle".
 When the button is clicked repeatedly, the text alternately disappears (hides) and reappears (shows).
 
+
+![Code 3 Output](outputs/code_3_output.png)
 ---
 
 ## Code 4
@@ -125,6 +131,8 @@ $("#fadeBtn").click(function () {
 Displays text "Fade this text" and a button "Fade Out".
 When the button is clicked, the text smoothly fades away until it disappears.
 
+
+![Code 4 Output](outputs/code_4_output.png)
 ---
 
 ## Code 5
@@ -155,6 +163,8 @@ $("#slideBtn").click(function () {
 Displays text "Slide me up" and a button "Slide Up".
 When the button is clicked, the text slides up (collapses vertically) and disappears.
 
+
+![Code 5 Output](outputs/code_5_output.png)
 ---
 
 ## Code 6
@@ -188,6 +198,8 @@ $("#addClassBtn").click(function () {
 Displays text "Highlight me" and a button "Add Class".
 When the button is clicked, the text gets a yellow background color.
 
+
+![Code 6 Output](outputs/code_6_output.png)
 ---
 
 ## Code 7
@@ -221,6 +233,8 @@ $("#removeClassBtn").click(function () {
 Displays text "Remove highlight" which initially has a yellow background.
 When the button "Remove Class" is clicked, the yellow background is removed.
 
+
+![Code 7 Output](outputs/code_7_output.png)
 ---
 
 ## Code 8
@@ -251,6 +265,8 @@ $("#textBtn").click(function () {
 Displays text "Old Text" and a button "Change Text".
 When the button is clicked, the text changes to "New Text using jQuery".
 
+
+![Code 8 Output](outputs/code_8_output.png)
 ---
 
 ## Code 9
@@ -281,6 +297,8 @@ $("#htmlBtn").click(function () {
 Displays text "Hello" and a button "Change HTML".
 When the button is clicked, the text changes to bold "**Hello World**".
 
+
+![Code 9 Output](outputs/code_9_output.png)
 ---
 
 ## Code 10
@@ -313,6 +331,8 @@ $("#appendBtn").click(function () {
 Displays a bulleted list with "Item 1" and a button "Append Item".
 When the button is clicked, a new bullet point "Item 2" is added to the list.
 
+
+![Code 10 Output](outputs/code_10_output.png)
 ---
 
 ## Code 11
@@ -343,6 +363,8 @@ $("#inputBox").keyup(function () {
 Displays an input text box.
 As you type into the box, the text you type appears immediately in the paragraph below it.
 
+
+![Code 11 Output](outputs/code_11_output.png)
 ---
 
 ## Code 12
@@ -391,6 +413,8 @@ Displays a table "Employee Data" populated from `data.csv`.
 | 2 | Ravi | ML | 65000 | Chennai |
 | 3 | Meena | NLP | 72000 | Hyderabad |
 
+
+![Code 12 Output](outputs/code_12_output.png)
 ---
 
 ## Code 13
@@ -428,6 +452,8 @@ Displays a heading "Employee Names" and a bulleted list:
 *   Ravi
 *   Meena
 
+
+![Code 13 Output](outputs/code_13_output.png)
 ---
 
 ## Code 14
@@ -470,6 +496,8 @@ Displays a table "AI Department Employees" showing only employees in the AI depa
 |----|------|------------|
 | 1 | Asha | AI |
 
+
+![Code 14 Output](outputs/code_14_output.png)
 ---
 
 ## Code 15
@@ -558,3 +586,6 @@ $.get("data.csv", function(data) {
 Displays a styled card component.
 **Header**: Average Salary
 **Content**: Average Salary: ₹69000
+
+
+![Code 15 Output](outputs/code_15_output.png)
