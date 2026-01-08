@@ -1,0 +1,30 @@
+<!-- Hide an Element Using jQuery -->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>jQuery Practice</title>
+
+    <!-- jQuery Library -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+
+    <h2>My First jQuery Program</h2>
+
+    <button id="btn">Click Me</button>
+    <p id="text">Hello World</p>
+
+    <script>
+        $(document).ready(function () {
+            $("#btn").click(function () {
+                $("#text").text("jQuery is working successfully!");
+            });
+        });
+    </script>
+
+</body>
+</html>
+
+

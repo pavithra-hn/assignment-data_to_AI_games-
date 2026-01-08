@@ -1,0 +1,35 @@
+<!-- Display CSV Data in HTML Table  -->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CSV to Table</title>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+
+<h3>Employee Data</h3>
+<table border="1" id="table1"></table>
+
+<script>
+$.get("data.csv", function(data) {
+  var rows = data.split("\n");
+  var table = "";
+
+  for (var i = 0; i < rows.length; i++) {
+    var cols = rows[i].split(",");
+    table += "<tr>";
+
+    for (var j = 0; j < cols.length; j++) {
+      table += (i === 0) ? "<th>" + cols[j] + "</th>" : "<td>" + cols[j] + "</td>";
+    }
+
+    table += "</tr>";
+  }
+
+  $("#table1").html(table);
+});
+</script>
+
+</body>
+</html>
