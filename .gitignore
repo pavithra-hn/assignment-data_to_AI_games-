@@ -1,3 +1,5 @@
 venv
 .env
 .idea
+jquery/p*.html
+jquery/index.html
