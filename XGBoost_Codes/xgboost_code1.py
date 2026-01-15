@@ -7,3 +7,6 @@ model = XGBRegressor()
 model.fit(x, y)
 
 print(model.predict([[5]]))
+
+# output
+# [152.77585]

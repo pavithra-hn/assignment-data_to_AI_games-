@@ -20,3 +20,6 @@ for _ in range(500):
     optimizer.step()
 
 print("Reconstruction done")
+
+# output : 
+# Reconstruction done

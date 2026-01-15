@@ -3,3 +3,5 @@ venv
 .idea
 jquery/p*.html
 jquery/index.html
+capture_screenshots.py
+update_readme.py

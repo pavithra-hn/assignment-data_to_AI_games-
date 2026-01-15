@@ -25,6 +25,6 @@ for _ in range(200):
 print(model(torch.tensor([[1.5]])).item())
 
 # output : 
-# 0.5810571312904358
+# 00.5743870735168457
 
 # here we used the binary classification to predict the output
