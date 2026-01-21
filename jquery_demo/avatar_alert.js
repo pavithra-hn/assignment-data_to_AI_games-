@@ -81,7 +81,7 @@ function callHeyGenAPI(textInput) {
 function renderAvatarVideo(url) {
     // 1. Construct Video HTML dynamically
     const videoHtml = `
-        <video autoplay controls width="100%" style="border-radius: 8px;">
+        <video autoplay controls width="100%" style="display:block;">
             <source src="${url}" type="video/mp4">
             Your browser does not support the video tag.
         </video>
@@ -92,6 +92,10 @@ function renderAvatarVideo(url) {
 
     // 3. Show Modal (Fade In)
     $("#avatar-modal").fadeIn(300);
+
+    // 4. Show RPG Text Box
+    $("#subtitle-box").fadeIn(300);
+    $("#subtitle-text").text("Mission Update: Payment successful. Proceed.");
 }
 
 
