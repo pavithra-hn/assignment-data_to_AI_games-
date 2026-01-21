@@ -8,9 +8,8 @@
 // Configuration
 // This is the specific HeyGen Video ID we generated (Female Voice "Allison")
 // In a real production app, this would be dynamic or cached.
-const MOCK_VIDEO_URL = "https://resource.heygen.ai/video/32dda5d3ddd046662a3be639d44995329/1280x720.mp4";
-// Note: If the above URL expires (HeyGen temporary URLs expire), use a placeholder for demo:
-// const MOCK_VIDEO_URL = "https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4";
+const MOCK_VIDEO_URL = "demo_avatar.mp4"; // Using local video as requested
+// const MOCK_VIDEO_URL = "https://resource.heygen.ai/video/32dda5d3ddd046662a3be639d44995329/1280x720.mp4";
 
 
 // --- MAIN ENTRY POINT ---

@@ -21,11 +21,12 @@ You can run the demo directly in your browser.
 
 1. **Download/Clone** this repository.
 2. Navigate to the `jquery_demo` folder.
-3. Open `index.html` in any web browser (Chrome, Edge, etc.).
-4. Click the **"RECEIVE TRANSMISSION"** button.
+3. **IMPORTANT:** Place your video file in this folder and name it `demo_avatar.mp4`.
+4. Open `index.html` in any web browser (Chrome, Edge, etc.).
+5. Click the **"RECEIVE TRANSMISSION"** button.
    - You will see a loading state.
    - A Sci-Fi/Gamer style modal will pop up.
-   - The avatar video will autoplay with a mission update.
+   - Your local video (`demo_avatar.mp4`) will play.
 
 ## 🛠 Integration Logic
 1. **Trigger**: User clicks a button.
