@@ -1,37 +1,84 @@
-# HeyGen Avatar Alert (PoC)
+# HeyGen Avatar Alert
 
-This project replaces the standard browser `alert()` with a "Gamified" Avatar Video Modal using jQuery and HeyGen.
+**AI Avatar speaks text to replace standard UI alerts.**
 
-## 📂 Project Structure
-- **`jquery_demo/`**: The main deliverable. Contains the frontend logic (`index.html`, `avatar_alert.js`).
-- **`python_implementation/`**: Backend reference code (Flask proxy).
+---
 
-## 📸 Screenshots
+## What This Does
 
-### 1. Loading State
-*"Connecting to HQ..." - The system initiates the API call.*
-![Loading State](jquery_demo/screenshots/loading_state.png)
+- Uses HeyGen API to generate an AI avatar video
+- Avatar speaks alert messages instead of text popups
+- Gaming-style UI with visual effects
 
-### 2. Final Output
-*The Avatar delivers the mission update in a Sci-Fi UI.*
-![Final Output](jquery_demo/screenshots/final_output.png)
+---
 
-## 🚀 How to Run (Step-by-Step)
-You can run the demo directly in your browser.
+## Prerequisites
 
-1. **Download/Clone** this repository.
-2. Navigate to the `jquery_demo` folder.
-3. **IMPORTANT:** Place your video file in this folder and name it `demo_avatar.mp4`.
-4. Open `index.html` in any web browser (Chrome, Edge, etc.).
-5. Click the **"RECEIVE TRANSMISSION"** button.
-   - You will see a loading state.
-   - A Sci-Fi/Gamer style modal will pop up.
-   - Your local video (`demo_avatar.mp4`) will play.
+| Requirement | Details |
+|-------------|---------|
+| Python | 3.8+ |
+| Browser | Chrome / Edge / Firefox |
 
-## 🛠 Integration Logic
-1. **Trigger**: User clicks a button.
-2. **API Call**: `avatar_alert.js` simulates an async call to HeyGen API (mocked for instant demo).
-3. **Render**: jQuery handles the UI updates (Loading State → Modal Display → Video Injection).
+---
 
-## 📝 Note
-This is a Proof of Concept. In a live production environment, the `callHeyGenAPI` function in `avatar_alert.js` would use `fetch()` or `$.ajax()` to hit your backend proxy.
+## Steps to Run
+
+```bash
+# 1. Clone the repo
+git clone <repo-url>
+cd HeyGen_Manager_Task
+
+# 2. Navigate to demo folder
+cd jquery_demo
+
+# 3. Start local server
+python -m http.server 8083
+
+# 4. Open in browser
+# http://127.0.0.1:8083/
+```
+
+---
+
+## Output
+
+### Initial UI
+![Initial](jquery_demo/screenshots/01_initial_ui.png)
+
+### Avatar Speaking
+![Avatar](jquery_demo/screenshots/02_avatar_modal.png)
+
+---
+
+## Features
+
+- ✅ Avatar video with audio
+- ✅ Gaming-style UI (neon borders, animations)
+- ✅ Typing animation for subtitles
+- ✅ Audio visualizer indicator
+
+---
+
+## Project Structure
+
+```
+HeyGen_Manager_Task/
+├── README.md
+├── jquery_demo/
+│   ├── index.html
+│   ├── avatar_alert.js
+│   ├── real.mp4
+│   └── screenshots/
+└── python_implementation/
+    ├── app.py
+    └── .env
+```
+
+---
+
+## Author
+
+| Field | Value |
+|-------|-------|
+| **Author** | Pavithra H N |
+| **Date** | 21 January 2026 |

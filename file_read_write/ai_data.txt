@@ -1,4 +1,0 @@
-AI Name, Type of AI, Use Case
-ChatGPT, Generative AI, Text Generation
-AlphaGo, Narrow AI, Game Playing
-Siri, Assistive AI, Voice Assistant

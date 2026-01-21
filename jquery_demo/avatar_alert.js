@@ -1,110 +1,95 @@
 /**
- * Avatar Alert Proof of Concept
- * 
- * Flow:
- * 1. User Trigger -> 2. Call API -> 3. Render Response via jQuery
+ * Avatar Alert - Gaming Edition
+ * HeyGen Avatar Integration with Sci-Fi UI
  */
 
 // Configuration
-// This is the specific HeyGen Video ID we generated (Female Voice "Allison")
-// In a real production app, this would be dynamic or cached.
-const MOCK_VIDEO_URL = "demo_avatar.mp4"; // Using local video as requested
-// const MOCK_VIDEO_URL = "https://resource.heygen.ai/video/32dda5d3ddd046662a3be639d44995329/1280x720.mp4";
-
+const VIDEO_URL = "real.mp4";
 
 // --- MAIN ENTRY POINT ---
 function showAvatarAlert(message) {
-    console.log("1. Avatar Alert Triggered with message:", message);
+    console.log("Transmission initiated:", message);
 
-    // UI: Show loading state via jQuery
+    // Show loading state
     $("#status-msg")
-        .text("Connecting to HeyGen API...")
-        .css("color", "#2563eb")
+        .html('Establishing connection<span class="loading-bar"></span>')
         .show();
 
-    // --- STEP 1: API CALL (Async) ---
-    // We call the API wrapper function with the text we want spoken.
+    // API Call
     callHeyGenAPI(message)
         .then(function (videoUrl) {
-
-            // --- STEP 2: RENDER RESPONSE (jQuery) ---
-            console.log("3. API Response Received. Rendering video...");
-            $("#status-msg").hide(); // Hide status
-
-            renderAvatarVideo(videoUrl);
-
+            $("#status-msg").hide();
+            renderAvatarVideo(videoUrl, message);
         })
         .catch(function (error) {
-            console.error("API Call Failed:", error);
-            $("#status-msg").text("Error: " + error).css("color", "red");
-            alert("Fallback: " + message); // Graceful degradation
+            $("#status-msg").html("Connection failed: " + error).css("color", "#ff3c3c");
+            alert(message);
         });
 }
 
-
 // --- API LAYER ---
-/**
- * callHeyGenAPI
- * Simulates (or performs) the asynchronous request to HeyGen.
- * Returns a Promise that resolves to the Video URL.
- */
 function callHeyGenAPI(textInput) {
-    console.log("2. Calling API with text:", textInput);
-
     return new Promise((resolve, reject) => {
-
-        // SIMULATION OF API DELAY
-        // In a real app, $.ajax or fetch would go here.
-        // Example:
-        // $.post('/api/generate-video', { text: textInput }, (data) => resolve(data.url));
-
         setTimeout(() => {
-            // MOCK RESPONSE
-            // We return a valid video URL simulating a successful generation.
-            if (textInput) {
-                // Return our pre-generated video for the demo
-                resolve(MOCK_VIDEO_URL);
-            } else {
-                reject("No text provided");
-            }
-        }, 1500); // 1.5 second delay to show "Connecting..." state
+            textInput ? resolve(VIDEO_URL) : reject("No input");
+        }, 1200);
     });
 }
 
-
-// --- VIEW LAYER (jQuery) ---
-/**
- * renderAvatarVideo
- * Uses jQuery to construct the HTML and display the modal.
- */
-function renderAvatarVideo(url) {
-    // 1. Construct Video HTML dynamically
+// --- RENDER VIDEO ---
+function renderAvatarVideo(url, message) {
     const videoHtml = `
-        <video autoplay controls width="100%" style="display:block;">
+        <video id="avatar-video" autoplay controls width="100%">
             <source src="${url}" type="video/mp4">
-            Your browser does not support the video tag.
         </video>
     `;
 
-    // 2. Inject into DOM
     $("#video-container").html(videoHtml);
+    $("#avatar-modal").css("display", "flex").hide().fadeIn(300);
+    $("#subtitle-box").fadeIn(200);
 
-    // 3. Show Modal (Fade In)
-    $("#avatar-modal").fadeIn(300);
+    // Typing effect
+    $("#subtitle-text").text("");
+    typeText(message, "#subtitle-text", 40);
 
-    // 4. Show RPG Text Box
-    $("#subtitle-box").fadeIn(300);
-    $("#subtitle-text").text("Mission Update: Payment successful. Proceed.");
+    // Audio sync
+    const video = document.getElementById('avatar-video');
+    if (video) {
+        video.addEventListener('play', () => $("#audio-viz").css("opacity", "1"));
+        video.addEventListener('pause', () => $("#audio-viz").css("opacity", "0.3"));
+        video.addEventListener('ended', () => {
+            $("#audio-viz").css("opacity", "0.3");
+            $(".cursor").css("animation", "none").css("opacity", "0");
+        });
+    }
 }
 
+// --- TYPING EFFECT ---
+function typeText(text, selector, speed) {
+    let i = 0;
+    const $el = $(selector);
 
-// --- UTILITIES ---
-// Modal Close Logic
+    (function type() {
+        if (i < text.length) {
+            $el.text($el.text() + text.charAt(i++));
+            setTimeout(type, speed);
+        }
+    })();
+}
+
+// --- MODAL CONTROLS ---
 $(document).ready(function () {
-    $(".close-btn, #avatar-modal").click(function (e) {
-        if (e.target !== this && !$(e.target).hasClass("close-btn")) return;
-
-        $("#avatar-modal").fadeOut(200);
-        setTimeout(() => $("#video-container").empty(), 200); // Clear video source
-    });
+    $(".close-btn").click(closeModal);
+    $("#avatar-modal").click(function (e) { if (e.target === this) closeModal(); });
+    $(document).keydown(function (e) { if (e.key === "Escape") closeModal(); });
 });
+
+function closeModal() {
+    const video = document.getElementById('avatar-video');
+    if (video) video.pause();
+
+    $("#avatar-modal").fadeOut(200, function () {
+        $("#video-container").empty();
+        $(".cursor").css("animation", "cursorBlink 0.7s infinite").css("opacity", "1");
+    });
+}
