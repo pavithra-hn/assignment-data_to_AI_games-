@@ -18,6 +18,28 @@
 |-------------|---------|
 | Python | 3.8+ |
 | Browser | Chrome / Edge / Firefox |
+| HeyGen API Key | See below |
+
+---
+
+## How to Get HeyGen API Key
+
+1. **Log In**: Sign in to your [HeyGen account](https://app.heygen.com/)
+2. **Access Settings**: Click your profile icon (bottom-left corner)
+3. **Navigate to API Section**:
+   - Select **Settings** → **Subscriptions & API**
+   - Select **HeyGen API** from sidebar
+4. **Generate Token**: Click to view or generate a new API key
+5. **Copy and Secure**: Save the token immediately
+
+### Important Notes
+
+| Note | Details |
+|------|---------|
+| Default Access | Free Trial includes 10 credits/month |
+| Header Format | `X-API-KEY: YOUR_API_TOKEN` |
+| API Credits | Separate from web-based credits |
+| Streaming API | Use `create_token` endpoint for session tokens |
 
 ---
 
