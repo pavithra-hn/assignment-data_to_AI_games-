@@ -74,11 +74,4 @@ HeyGen_Manager_Task/
     └── .env
 ```
 
----
 
-## Author
-
-| Field | Value |
-|-------|-------|
-| **Author** | Pavithra H N |
-| **Date** | 21 January 2026 |
