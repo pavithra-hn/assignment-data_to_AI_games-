@@ -16,8 +16,8 @@
 
 | Requirement | Details |
 |-------------|---------|
-| Python | 3.8+ |
 | Browser | Chrome / Edge / Firefox |
+| Web Server | Optional (for testing locally) |
 | HeyGen API Key | See below |
 
 ---
@@ -86,14 +86,18 @@ python -m http.server 8083
 ```
 HeyGen_Manager_Task/
 ├── README.md
-├── jquery_demo/
-│   ├── index.html
-│   ├── avatar_alert.js
-│   ├── real.mp4
-│   └── screenshots/
-└── python_implementation/
-    ├── app.py
-    └── .env
+├── .gitignore
+└── jquery_demo/
+    ├── index.html          # Main HTML file with UI
+    ├── avatar_alert.js     # jQuery & JavaScript logic
+    ├── real.mp4           # Avatar video file
+    └── screenshots/       # UI screenshots
 ```
 
+## Technologies Used
+
+- **HTML5**: Structure and markup
+- **jQuery**: DOM manipulation and event handling
+- **JavaScript**: HeyGen Avatar integration logic
+- **CSS3**: Styling, animations, and gaming-style effects
 
