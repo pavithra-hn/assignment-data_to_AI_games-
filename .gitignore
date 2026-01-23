@@ -1,0 +1,10 @@
+# Ignore EVERYTHING by default
+*
+
+# Allow these files/directories specifically:
+!.gitignore
+!README.md
+!jquery_demo/
+!jquery_demo/*
+!jquery_demo/screenshots/
+!jquery_demo/screenshots/*
