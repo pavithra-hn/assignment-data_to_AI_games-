@@ -234,10 +234,3 @@ function typeText(text) {
 
 ---
 
-## 📄 License
-
-MIT License - Feel free to use in your projects!
-
----
-
-**Built with ❤️ for AI-powered learning experiences**
