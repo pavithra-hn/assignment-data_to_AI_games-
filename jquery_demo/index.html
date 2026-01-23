@@ -497,7 +497,7 @@
         </p>
 
         <div class="btn-group">
-            <button class="btn btn-secondary" onclick="alert('Lesson completed!')">
+            <button class="btn btn-secondary" id="skip-intro">
                 Skip Intro
             </button>
             <button class="btn btn-primary" id="trigger-avatar">
@@ -548,8 +548,27 @@
     <script src="avatar_alert.js"></script>
     <script>
         $(document).ready(function () {
+            // Start Lesson button
             $('#trigger-avatar').click(function () {
                 showAvatarAlert("Great job! You have successfully completed the Python basics module. Let's move on to functions and loops.");
+            });
+
+            // Skip Intro button
+            $('#skip-intro').click(function () {
+                // Show confirmation message
+                $('#status-msg')
+                    .html('✓ Lesson skipped - Moving to next module')
+                    .css({
+                        'color': '#00ff88',
+                        'font-weight': '600',
+                        'text-shadow': '0 0 10px rgba(0, 255, 136, 0.5)'
+                    })
+                    .fadeIn(300)
+                    .delay(2000)
+                    .fadeOut(500);
+
+                // Optional: You can also redirect or perform other actions here
+                console.log('Skip Intro clicked - Lesson skipped');
             });
         });
     </script>
