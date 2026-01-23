@@ -10,4 +10,5 @@
 !jquery_demo/screenshots/*
 
 !assignment/
+!assignment/**
 assignment/venv/

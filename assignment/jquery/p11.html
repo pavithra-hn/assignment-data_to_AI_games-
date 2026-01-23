@@ -1,0 +1,21 @@
+<!-- Keyup Event -->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Keyup</title>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+
+<input type="text" id="inputBox">
+<p id="output"></p>
+
+<script>
+$("#inputBox").keyup(function () {
+  $("#output").text($(this).val());
+});
+</script>
+
+</body>
+</html>

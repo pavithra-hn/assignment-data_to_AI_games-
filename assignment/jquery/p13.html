@@ -1,0 +1,26 @@
+<!-- Read CSV and Display Only Names -->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CSV Names List</title>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+
+<h3>Employee Names</h3>
+<ul id="nameList"></ul>
+
+<script>
+$.get("data.csv", function(data) {
+  var rows = data.split("\n");
+
+  for (var i = 1; i < rows.length; i++) {
+    var cols = rows[i].split(",");
+    $("#nameList").append("<li>" + cols[1] + "</li>");
+  }
+});
+</script>
+
+</body>
+</html>
