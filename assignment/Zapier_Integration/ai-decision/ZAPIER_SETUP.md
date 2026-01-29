@@ -1,4 +1,4 @@
-# ⚡ Master Guide: Zapier Setup
+# ⚡ Master Guide: Advanced Zapier AI (LangGraph + LangChain)
 
 This guide assumes your server and ngrok are already running (which they are!).
 

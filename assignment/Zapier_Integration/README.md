@@ -163,9 +163,13 @@ See detailed setup guide: [AI Decision Setup](./ai-decision/ZAPIER_SETUP.md)
 
 This project includes a custom **AI Decision Server** that acts as a brain for your Zaps.
 
-- **How it works**: Zapier sends text to your local computer -> Gemini 2.0 AI decides the category -> Zapier filters the action.
+- **How it works**: Zapier sends text to your local computer -> **LangGraph** (State Machine) manages the workflow -> **LangChain** orchestrates the **Gemini 2.0 AI** decision -> Zapier filters the action.
+- **Advanced Features**: 
+  - **LangChain**: For LLM orchestration.
+  - **LangGraph**: For state-managed decision workflows.
+  - **Simulated MCP**: Logic for context-aware decision making.
 - **Categories**: `calendar`, `email`, `ignore`.
-- **Tech Stack**: Python (FastAPI), Google Gemini AI, Ngrok.
+- **Tech Stack**: Python (FastAPI), LangChain, LangGraph, Google Gemini AI, Ngrok.
 
 ### Key Files in `ai-decision/`
 - `main.py`: The Python server code.
