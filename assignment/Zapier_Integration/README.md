@@ -15,10 +15,11 @@
 3. [Getting Started](#getting-started)
 4. [Gmail Integration](#gmail-integration)
 5. [Google Calendar Integration](#google-calendar-integration)
-6. [Popular Zap Templates](#popular-zap-templates)
-7. [Advanced Automations](#advanced-automations)
-8. [Best Practices](#best-practices)
-9. [Troubleshooting](#troubleshooting)
+6. [AI Decision Integration](#ai-decision-integration)
+7. [Popular Zap Templates](#popular-zap-templates)
+8. [Advanced Automations](#advanced-automations)
+9. [Best Practices](#best-practices)
+10. [Troubleshooting](#troubleshooting)
 
 ---
 
@@ -154,6 +155,32 @@ Google Calendar integration allows you to:
 
 ---
 
+## 🧠 AI Decision Integration
+
+See detailed setup guide: [AI Decision Setup](./ai-decision/ZAPIER_SETUP.md)
+
+### Quick Overview
+
+This project includes a custom **AI Decision Server** that acts as a brain for your Zaps.
+
+- **How it works**: Zapier sends text to your local computer -> Gemini 2.0 AI decides the category -> Zapier filters the action.
+- **Categories**: `calendar`, `email`, `ignore`.
+- **Tech Stack**: Python (FastAPI), Google Gemini AI, Ngrok.
+
+### Key Files in `ai-decision/`
+- `main.py`: The Python server code.
+- `ZAPIER_SETUP.md`: Step-by-step guide to connecting this to Zapier.
+- `test_request.py`: Script to verify the server is working.
+
+### Proof of Concept
+![Zapier Flow](./images/zapier_flow.png)
+*Figure 1: Full Zapier Workflow Configuration*
+
+![Email Result](./images/email_result.png)
+*Figure 2: Successful Email Notification from AI*
+
+---
+
 ## 🎯 Popular Zap Templates
 
 ### Email + Calendar Combinations
@@ -266,16 +293,12 @@ Zapier_Integration/
 ├── README.md                          # This file
 ├── Gmail_Integration.md               # Detailed Gmail guide
 ├── Google_Calendar_Integration.md     # Detailed Calendar guide
-├── examples/
-│   ├── email_to_calendar_zap.json    # Example Zap configuration
-│   ├── daily_digest_zap.json         # Daily digest automation
-│   └── multi_step_automation.json    # Complex workflow example
-├── webhooks/
-│   ├── webhook_handler.py            # Python webhook receiver
-│   └── webhook_examples.md           # Webhook documentation
-└── api/
-    ├── zapier_api_guide.md           # API integration guide
-    └── python_zapier_client.py       # Python API client
+└── ai-decision/                       # 🧠 AI Brain Project
+    ├── main.py                        # AI Server (FastAPI)
+    ├── ZAPIER_SETUP.md                # Setup Instructions
+    ├── requirements.txt               # Python dependencies
+    ├── .env                           # API Keys (Local only)
+    └── .gitignore                     # Git configuration
 ```
 
 ---

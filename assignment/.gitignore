@@ -1,3 +1,7 @@
-venv
+venv/
 .env
-.idea
+.idea/
+ngrok.exe
+*.log
+Zapier_Integration/ai-decision/ngrok_log.txt
+__pycache__/
