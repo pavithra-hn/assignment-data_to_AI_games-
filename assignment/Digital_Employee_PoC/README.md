@@ -4,7 +4,7 @@ This project implements a "Digital Employee" that acts as a bridge between a Use
 
 ## Architecture
 
-![Zapier Flow](clean_zapier_flow_screenshot.png)
+![Zapier Flow](zapier_workflow_diagram_safe.png)
 ![Email Proof](email_proof_mockup.png)
 
 ---
