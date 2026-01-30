@@ -1,28 +1,15 @@
-# 🤖 Digital Employee PoC Guide
+# Digital Employee PoC Guide
 
 This project implements a "Digital Employee" that acts as a bridge between a User and their apps (Gmail/Calendar) via Zapier.
 
-## 🏗️ Architecture
+## Architecture
 
-![Zapier Workflow](zapier_workflow_diagram_safe.png)
-
-```mermaid
-graph LR
-    User[User Query] -->|HTPP Request| AI[AI Brain (FastAPI)]
-    AI -->|Analyze Intent| Decision{Decision}
-    Decision -->|'check_calendar'| Zap1[Zapier Webhook A]
-    Decision -->|'summarize_emails'| Zap2[Zapier Webhook B]
-    
-    Zap1 -->|Find Events| GCal[Google Calendar]
-    Zap1 -->|Send Report| UserEmail[User's Email]
-    
-    Zap2 -->|Search Emails| Gmail[Gmail]
-    Zap2 -->|Send Summary| UserEmail
-```
+![Zapier Flow](clean_zapier_flow_screenshot.png)
+![Email Proof](email_proof_mockup.png)
 
 ---
 
-## 🚀 Step 1: Zapier Setup
+## Step 1: Zapier Setup
 
 You need to create **two** separate Zaps (or one advanced Zap with Paths) to handle the requests.
 
@@ -46,7 +33,7 @@ You need to create **two** separate Zaps (or one advanced Zap with Paths) to han
 
 ---
 
-## 💻 Step 2: Local Setup
+## Step 2: Local Setup
 
 1.  **Install Dependencies**:
     ```bash
@@ -66,7 +53,7 @@ You need to create **two** separate Zaps (or one advanced Zap with Paths) to han
     python brain.py
     ```
 
-## 🧪 Step 3: Usage
+## Step 3: Usage
 
 **Ask your employee a question:**
 
