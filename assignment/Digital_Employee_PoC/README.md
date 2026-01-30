@@ -4,10 +4,6 @@ This project implements a "Digital Employee" that acts as a bridge between a Use
 
 ## Architecture
 
-![Zapier Flow](zapier_workflow_diagram_safe.png)
-![Email Proof](email_proof_mockup.png)
-
----
 
 ## Step 1: Zapier Setup
 
@@ -68,3 +64,19 @@ curl -X POST "http://localhost:8000/ask" \
 1.  Server prints: "Intent: check_calendar"
 2.  Server sends webhook to Zapier.
 3.  Zapier runs, finds events, and emails you the list.
+
+---
+
+## Screenshots - Task Completed ✅
+
+Here is the progress and proof of the working Digital Employee PoC:
+
+### Zapier Workflow Setup
+<p align="center">
+  <img src="images/zapier_workflow.png" alt="Zapier Workflow Screenshot" width="560" />
+</p>
+
+### Email Result Received
+<p align="center">
+  <img src="images/email_result.png" alt="Email Result Screenshot" width="1024" />
+</p>

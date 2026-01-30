@@ -1,0 +1,15 @@
+# Environment Variables
+.env
+
+# Python compilation
+__pycache__/
+*.pyc
+
+# Local Development tools
+ngrok.exe
+ngrok.log
+ngrok_log.txt
+
+# Virtual Environment
+venv/
+.venv/
