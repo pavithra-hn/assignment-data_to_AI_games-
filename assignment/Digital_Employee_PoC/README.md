@@ -106,7 +106,7 @@ curl -X POST "http://localhost:8000/ask" \
 
 ```
 ┌─────────────┐     ┌─────────────────┐     ┌─────────────┐     ┌──────────────┐
-│    User     │────▶│  FastAPI Brain  │────▶│   Zapier    │────▶│ Gmail/Calendar│
+│    User     │────▶│  FastAPI Brain │────▶│   Zapier    │────▶│ Gmail/Calendar│
 │  (Query)    │     │  (Gemini LLM)   │     │  (Webhook)  │     │   (Action)   │
 └─────────────┘     └─────────────────┘     └─────────────┘     └──────────────┘
 ```
