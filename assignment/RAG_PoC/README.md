@@ -74,6 +74,8 @@ Put your PDF, Markdown, or Text files in `data/` folder.
 python ingest.py
 ```
 
+![Ingest Output](images/ingest_output.png)
+
 Output:
 ```
 ============================================================
@@ -103,6 +105,8 @@ Output:
 ```bash
 python query.py
 ```
+
+![Query Output](images/query_output.png)
 
 Output:
 ```
@@ -201,7 +205,7 @@ retriever = vectordb.as_retriever(
 |------|---------|
 | `ingest.py` | Load documents, create embeddings, persist to ChromaDB |
 | `query.py` | Load vector DB, retrieve chunks, generate answers |
-| `rag_demo.py` | Simple standalone demo (alternative) |
+
 | `requirements.txt` | Python dependencies |
 
 ---
