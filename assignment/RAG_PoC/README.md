@@ -73,71 +73,18 @@ Put your PDF, Markdown, or Text files in `data/` folder.
 ```bash
 python ingest.py
 ```
-
+Output:
 ![Ingest Output](images/ingest_output.png)
 
-Output:
-```
-============================================================
-  RAG PoC - Document Ingestion
-============================================================
-
-[STEP 1] Loading documents...
-  [OK] handbook.md (Markdown)
-  [OK] policy.txt (Text)
-
-  Loaded 2 document(s)
-
-[STEP 2] Splitting into chunks...
-  Created 4 chunks
-
-[STEP 3] Creating embeddings...
-  Using OpenAI Embeddings
-
-[STEP 4] Persisting to Chroma vector store...
-
-[DONE] Vector database persisted to: vector_db/
-  Total chunks indexed: 4
-```
 
 ### 5. Query Documents
 
 ```bash
 python query.py
 ```
+Output:
 
 ![Query Output](images/query_output.png)
-
-Output:
-```
-============================================================
-  RAG PoC - Query Interface
-============================================================
-
-[INFO] Loading vector database...
-[INFO] Using OpenAI GPT-3.5-turbo
-
-============================================================
-  Ready! Ask questions about your documents.
-  Type 'exit' or 'quit' to stop.
-============================================================
-
-Your Question: How long do we retain customer data?
-
-[Searching...]
-
---- Answer ---
-According to the Data Retention Policy, customer data is retained for 
-3 years from the last interaction. After 3 years, data will be 
-anonymized or deleted. Customers can also request data deletion at any time.
-
---- Sources (retrieved chunks) ---
-
-[1] Source: policy.txt
-    Content: Data Retention Policy...Customer data will be retained 
-    for 3 years from the last interaction...
-----------------------------------------
-```
 
 ---
 
