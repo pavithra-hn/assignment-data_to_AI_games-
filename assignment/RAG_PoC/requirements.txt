@@ -1,0 +1,20 @@
+# Core LangChain
+langchain
+langchain-community
+langchain-openai
+langchain-chroma
+
+# Embeddings
+openai
+sentence-transformers
+
+# Vector Store
+chromadb
+
+# Document Loaders
+pypdf
+unstructured
+
+# Utilities
+python-dotenv
+tiktoken

@@ -1,0 +1,22 @@
+Data Retention Policy
+=====================
+
+1. Customer Data Retention
+- Customer data will be retained for 3 years from the last interaction.
+- After 3 years, data will be anonymized or deleted.
+- Customers can request data deletion at any time.
+
+2. Security Requirements
+- Sensitive PII must be encrypted at rest using AES-256.
+- Data in transit must use TLS 1.2 or higher.
+- Access logs must be retained for 1 year.
+
+3. Backup Policy
+- Daily backups for all production databases.
+- Weekly full backups stored offsite.
+- Backup retention: 90 days.
+
+4. Compliance
+- GDPR compliant for EU customers.
+- SOC 2 Type II certified.
+- Annual security audits required.
